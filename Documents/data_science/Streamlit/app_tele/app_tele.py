@@ -61,13 +61,13 @@ def main():
     st.markdown("---")
 
     dir_path = os.path.dirname(__file__)
-image_path = os.path.join(dir_path, "Bank-Branding.jpg")
+    image_path = os.path.join(dir_path, "Bank-Branding.jpg")
 
-try:
-    image = Image.open(image_path)
-    st.sidebar.image(image)
-except FileNotFoundError:
-    st.sidebar.warning(f"Imagem '{image_path}' não encontrada.")
+    try:
+        image = Image.open(image_path)
+        st.sidebar.image(image)
+    except FileNotFoundError:
+        st.sidebar.warning(f"Imagem '{image_path}' não encontrada.")
 
     # Upload do arquivo
     st.sidebar.header("📁 Faça upload do arquivo")
@@ -193,6 +193,7 @@ except FileNotFoundError:
 
 if __name__ == '__main__':
     main()
+
 
 
 
