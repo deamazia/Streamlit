@@ -59,12 +59,14 @@ def main():
     st.title('📞 Telemarketing Analysis')
     st.markdown("---")
 
-    # Imagem lateral
-    try:
-        image = Image.open("Bank-Branding.jpg")
-        st.sidebar.image(image)
-    except FileNotFoundError:
-        st.sidebar.warning("Imagem 'Bank-Branding.jpg' não encontrada.")
+    dir_path = os.path.dirname(__file__)
+image_path = os.path.join(dir_path, "Bank-Branding.jpg")
+
+try:
+    image = Image.open(image_path)
+    st.sidebar.image(image)
+except FileNotFoundError:
+    st.sidebar.warning(f"Imagem '{image_path}' não encontrada.")
 
     # Upload do arquivo
     st.sidebar.header("📁 Faça upload do arquivo")
