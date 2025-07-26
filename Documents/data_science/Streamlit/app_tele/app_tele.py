@@ -5,6 +5,7 @@ import seaborn           as sns
 import matplotlib.pyplot as plt
 from PIL                import Image
 from io                 import BytesIO
+import os
 
 # Configuração do tema do seaborn
 custom_params = {"axes.spines.right": False, "axes.spines.top": False}
